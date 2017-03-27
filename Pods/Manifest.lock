@@ -1,3 +1,15 @@
-PODFILE CHECKSUM: 16baa70b56d4dfcedfec0af97061408c6ceea7a9
+PODS:
+  - JSONModel (1.7.0)
+  - SVPullToRefresh_Bell (1.0.1)
+
+DEPENDENCIES:
+  - JSONModel
+  - SVPullToRefresh_Bell
+
+SPEC CHECKSUMS:
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  SVPullToRefresh_Bell: f9460c49e97e5d7dd938c9bac3628d17d3a51de9
+
+PODFILE CHECKSUM: e723b042325590d323a76d9f0bb9ac893c7bcc17
 
 COCOAPODS: 1.2.0

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>JSONModel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Usuarios.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -19,8 +24,39 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVPullToRefresh_Bell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>08D1E36A48AFADE55C67C4A1B78224B1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5C26827FFEE9C26109E0712C013BCBDB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C8C7E9DDD0B8942AAF605C648D22B419</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DC3688684BF42A20A8998F31DDA51A49</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F257A9D34E6E2E6A3552C1995DE65E6E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
