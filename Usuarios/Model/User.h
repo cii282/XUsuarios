@@ -23,7 +23,7 @@
 @property(nonatomic, strong) NSNumber *avg_customer;
 @property(nonatomic, strong) Bio *bio;
 @property(nonatomic, strong) Picture *picture;
-@property(nonatomic) NSInteger *user_id;
+@property(nonatomic) NSNumber *userId;
 @property(nonatomic, strong) Name *name;
 @property(nonatomic, strong) NSString *nat;
 

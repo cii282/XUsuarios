@@ -10,6 +10,8 @@ target 'Usuarios' do
   # Pods for Usuarios
   pod 'JSONModel'
   pod 'SVPullToRefresh_Bell'
+  pod 'AFNetworking'
+  pod 'SDWebImage'
 
   target 'UsuariosTests' do
     inherit! :search_paths

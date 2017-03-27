@@ -20,6 +20,11 @@
 		263424941E8985F9001D0B40 /* Pagination.m in Sources */ = {isa = PBXBuildFile; fileRef = 263424931E8985F9001D0B40 /* Pagination.m */; };
 		263424971E89865F001D0B40 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 263424961E89865F001D0B40 /* User.m */; };
 		2634249C1E89891B001D0B40 /* UsersResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2634249B1E89891B001D0B40 /* UsersResponse.m */; };
+		263424A01E898A84001D0B40 /* UsersListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2634249F1E898A84001D0B40 /* UsersListViewController.m */; };
+		263424A31E898B3B001D0B40 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 263424A21E898B3B001D0B40 /* APIClient.m */; };
+		263424A81E899506001D0B40 /* UserCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 263424A61E899506001D0B40 /* UserCellTableViewCell.m */; };
+		263424A91E899506001D0B40 /* UserCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 263424A71E899506001D0B40 /* UserCellTableViewCell.xib */; };
+		263424AC1E89A5E1001D0B40 /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 263424AB1E89A5E1001D0B40 /* UserDetailsViewController.m */; };
 		C294AA46E1096565BAC72D67 /* Pods_UsuariosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CD0AA097A26E6A76AC551A /* Pods_UsuariosUITests.framework */; };
 		CC47B6D401A69E9CCA15A4FE /* Pods_UsuariosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EFD670DE4C118484C26857 /* Pods_UsuariosTests.framework */; };
 		E36313C7F517001354B969FE /* Pods_Usuarios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CDABF232C00C9095179BA9 /* Pods_Usuarios.framework */; };
@@ -69,6 +74,15 @@
 		263424961E89865F001D0B40 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
 		2634249A1E89891B001D0B40 /* UsersResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UsersResponse.h; path = Model/Response/UsersResponse.h; sourceTree = "<group>"; };
 		2634249B1E89891B001D0B40 /* UsersResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UsersResponse.m; path = Model/Response/UsersResponse.m; sourceTree = "<group>"; };
+		2634249E1E898A84001D0B40 /* UsersListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UsersListViewController.h; path = ViewControllers/UsersListViewController.h; sourceTree = "<group>"; };
+		2634249F1E898A84001D0B40 /* UsersListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UsersListViewController.m; path = ViewControllers/UsersListViewController.m; sourceTree = "<group>"; };
+		263424A11E898B3B001D0B40 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIClient.h; path = API/APIClient.h; sourceTree = "<group>"; };
+		263424A21E898B3B001D0B40 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIClient.m; path = API/APIClient.m; sourceTree = "<group>"; };
+		263424A51E899506001D0B40 /* UserCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserCellTableViewCell.h; path = ViewControllers/Cell/UserCellTableViewCell.h; sourceTree = "<group>"; };
+		263424A61E899506001D0B40 /* UserCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserCellTableViewCell.m; path = ViewControllers/Cell/UserCellTableViewCell.m; sourceTree = "<group>"; };
+		263424A71E899506001D0B40 /* UserCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserCellTableViewCell.xib; path = ViewControllers/Cell/UserCellTableViewCell.xib; sourceTree = "<group>"; };
+		263424AA1E89A5E1001D0B40 /* UserDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserDetailsViewController.h; path = ViewControllers/UserDetailsViewController.h; sourceTree = "<group>"; };
+		263424AB1E89A5E1001D0B40 /* UserDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserDetailsViewController.m; path = ViewControllers/UserDetailsViewController.m; sourceTree = "<group>"; };
 		46AE10EFD80BB77A68248F60 /* Pods-UsuariosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsuariosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UsuariosUITests/Pods-UsuariosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A38A23900C1FD8E09E39E77 /* Pods-UsuariosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsuariosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UsuariosTests/Pods-UsuariosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		82CD0AA097A26E6A76AC551A /* Pods_UsuariosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UsuariosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +157,7 @@
 		263424501E89827C001D0B40 /* Usuarios */ = {
 			isa = PBXGroup;
 			children = (
+				2634249D1E898A5E001D0B40 /* ViewControllers */,
 				263424851E898350001D0B40 /* Model */,
 				263424841E898349001D0B40 /* API */,
 				263424541E89827C001D0B40 /* AppDelegate.h */,
@@ -185,6 +200,8 @@
 		263424841E898349001D0B40 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				263424A11E898B3B001D0B40 /* APIClient.h */,
+				263424A21E898B3B001D0B40 /* APIClient.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -222,6 +239,28 @@
 				2634249B1E89891B001D0B40 /* UsersResponse.m */,
 			);
 			name = Response;
+			sourceTree = "<group>";
+		};
+		2634249D1E898A5E001D0B40 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				263424A41E8994EE001D0B40 /* Cell */,
+				2634249E1E898A84001D0B40 /* UsersListViewController.h */,
+				2634249F1E898A84001D0B40 /* UsersListViewController.m */,
+				263424AA1E89A5E1001D0B40 /* UserDetailsViewController.h */,
+				263424AB1E89A5E1001D0B40 /* UserDetailsViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		263424A41E8994EE001D0B40 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				263424A51E899506001D0B40 /* UserCellTableViewCell.h */,
+				263424A61E899506001D0B40 /* UserCellTableViewCell.m */,
+				263424A71E899506001D0B40 /* UserCellTableViewCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		FB554C81607CC54D2C2F3A56 /* Pods */ = {
@@ -349,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				263424A91E899506001D0B40 /* UserCellTableViewCell.xib in Resources */,
 				263424611E89827C001D0B40 /* LaunchScreen.storyboard in Resources */,
 				2634245E1E89827C001D0B40 /* Assets.xcassets in Resources */,
 				2634245C1E89827C001D0B40 /* Main.storyboard in Resources */,
@@ -519,8 +559,12 @@
 				263424941E8985F9001D0B40 /* Pagination.m in Sources */,
 				2634249C1E89891B001D0B40 /* UsersResponse.m in Sources */,
 				263424881E898479001D0B40 /* Picture.m in Sources */,
+				263424A31E898B3B001D0B40 /* APIClient.m in Sources */,
+				263424A01E898A84001D0B40 /* UsersListViewController.m in Sources */,
 				263424561E89827C001D0B40 /* AppDelegate.m in Sources */,
 				2634248E1E89856C001D0B40 /* Bio.m in Sources */,
+				263424A81E899506001D0B40 /* UserCellTableViewCell.m in Sources */,
+				263424AC1E89A5E1001D0B40 /* UserDetailsViewController.m in Sources */,
 				263424531E89827C001D0B40 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -668,6 +712,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xusuarios.Usuarios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -681,6 +726,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xusuarios.Usuarios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

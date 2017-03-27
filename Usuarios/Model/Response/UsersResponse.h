@@ -16,6 +16,6 @@
 @interface UsersResponse : JSONModel
 
 @property(nonatomic, strong) Pagination *pagination;
-@property(nonatomic, strong) NSArray<User> *results;
+@property(nonatomic, strong) NSMutableArray<User> *results;
 
 @end

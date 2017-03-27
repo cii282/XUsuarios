@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -24,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SVPullToRefresh_Bell.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +42,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0792444D1C07BFD88429C037B8DC60B0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>08D1E36A48AFADE55C67C4A1B78224B1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5C26827FFEE9C26109E0712C013BCBDB</key>
+		<key>75AE4172BD8AC84880B7BC211022E319</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DC3688684BF42A20A8998F31DDA51A49</key>
+		<key>CDF09B8643A89D9C3827BF7DBDBF29A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F257A9D34E6E2E6A3552C1995DE65E6E</key>
+		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DC3688684BF42A20A8998F31DDA51A49</key>
 		<dict>
 			<key>primary</key>
 			<true/>

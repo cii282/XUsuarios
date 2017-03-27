@@ -14,7 +14,7 @@
     return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{
                                                        @"bio": @"bio",
                                                        @"picture": @"picture",
-                                                       @"id": @"user_id",
+                                                       @"userId": @"id",
                                                        @"name":@"name",
                                                        @"nat":@"nat",
                                                        @"avg_customer":@"avg_customer"
