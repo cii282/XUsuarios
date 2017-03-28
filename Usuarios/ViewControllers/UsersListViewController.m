@@ -10,11 +10,14 @@
 #import "APIClient.h"
 #import "UserCellTableViewCell.h"
 #import <SVPullToRefresh_Bell/SVPullToRefresh.h>
+#import "UserDetailsViewController.h"
+#import "UIHelper.h"
 
 int const limit = 20;
 
 @interface UsersListViewController (){
     NSMutableArray<User> *users;
+    User *userDidSelect;
     IBOutlet UITableView *tableViewUsers;
     int page;
 
@@ -26,7 +29,6 @@ int const limit = 20;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     self.navigationItem.title = @"Usuários";
     
     [self configTableView];
@@ -34,6 +36,10 @@ int const limit = 20;
     
 
     // Do any additional setup after loading the view.
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,9 +62,10 @@ int const limit = 20;
 }
 
 -(void)listUsers{
+    [UIHelper showProgress];
     [[APIClient sharedManager] listUsers:page*limit andLimit:limit completion:^(UsersResponse *response, NSString *errorMessage){
         [tableViewUsers.pullToRefreshView stopAnimating];
-        // [UIHelper hideProgress];
+        [UIHelper hideProgress];
         if(errorMessage)
         {
             NSLog(@"Erro");
@@ -81,15 +88,17 @@ int const limit = 20;
     }];
     
 }
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"detailSegue"])
+    {
+        UserDetailsViewController *controller = segue.destinationViewController;
+        controller.userId = userDidSelect.userId;
+    }
 }
-*/
+
 #pragma mark - TableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return users.count;
@@ -104,6 +113,12 @@ int const limit = 20;
     User *user = users[(NSUInteger) indexPath.row];
     UserCellTableViewCell *cell = [[UserCellTableViewCell alloc] initWithUser:user];
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    User *user = users[(NSUInteger) indexPath.row];
+    userDidSelect = user;
+    [self performSegueWithIdentifier:@"detailSegue" sender:self];
 }
 
 

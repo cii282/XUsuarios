@@ -31,7 +31,8 @@
         cell = [nib objectAtIndex:0];
 
         
-        [cell.ivPhoto sd_setImageWithURL:[NSURL URLWithString:user.picture.thumbnail]];
+        [cell.ivPhoto sd_setImageWithURL:[NSURL URLWithString:user.picture.thumbnail]
+                        placeholderImage:[UIImage imageNamed:@"placeholder"]];
     
         cell.ivPhoto.layer.cornerRadius = cell.ivPhoto.frame.size.width / 2;
         cell.ivPhoto.layer.borderWidth = 2;

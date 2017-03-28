@@ -17,8 +17,17 @@
                                                        @"userId": @"id",
                                                        @"name":@"name",
                                                        @"nat":@"nat",
-                                                       @"avg_customer":@"avg_customer"
+                                                       @"avg_customer":@"avg_customer",
+                                                       @"cell":@"cell",
+                                                       @"email":@"email",
+                                                       @"location":@"location"
                                                        }];
     
 }
+
++(BOOL)propertyIsOptional:(NSString*)propertyName
+{
+    return YES;
+}
+
 @end

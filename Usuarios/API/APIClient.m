@@ -68,6 +68,79 @@ NSString *const APIMeusCupons = @"Cupom/ObterMeusCupons";
 }
 
 
+- (NSURLSessionDataTask *)userDetail:(NSNumber *)userId completion:(void (^)(User *response, NSString *errorMessage))completion{
+    
+    NSURLSessionDataTask *task = [self GETWithLogParams:[NSString stringWithFormat:@"user/%@",userId] parameters:[NSDictionary new]
+                                                 success:^(NSURLSessionDataTask *task, id responseObject) {
+                                                     
+                                                     NSError *error;
+                                                     User *detailsResponse = [[User  alloc] initWithDictionary:responseObject error:&error];
+                                                     
+                                                     if (error)
+                                                         completion(nil, NSLocalizedString(serverDown, nil));
+                                                     else {
+//                                                         if (!loginResponse.success){
+//                                                             
+//                                                             [[UIHelper sharedInstance] mostrarAlerta:loginResponse.message];
+//                                                         }
+//                                                         
+                                                         
+                                                         completion(detailsResponse, nil);
+                                                     }
+                                                     
+                                                     
+                                                 } failure:^(NSURLSessionDataTask *task, NSError *error) {
+                                                     
+                                                     if (((NSHTTPURLResponse *) [task response]).statusCode == kErrorUnauthorized) {
+                                                         completion(nil, NSLocalizedString(badCredentials, nil));
+                                                     } else {
+                                                         completion(nil, NSLocalizedString(serverDown, nil));
+                                                     }
+                                                 }];
+    
+    return task;
+    
+}
+
+- (NSURLSessionDataTask *) sendImage:(UploadImageRequest*)request completion:(void (^)(NSString* errorMessage)) completion{
+    
+    
+    NSDictionary *parametros = [request toDictionary];
+    
+    
+    NSURLSessionDataTask *task = [self POSTWithLogParams:@"upload" parameters:parametros
+                                                 success:^(NSURLSessionDataTask *task, id responseObject) {
+                                                     NSError *error;
+                                                     
+                                                    
+                                                     
+                                                     if (error)
+                                                         completion(NSLocalizedString(serverDown, nil));
+                                                     else {
+//                                                         if (!responseObj.success){
+//                                                             
+//                                                             [[UIHelper sharedInstance] mostrarAlerta:responseObj.message];
+                                                         }
+                                                         //else{
+                                                            // [self setUserFoto:[NSString stringWithFormat:@"%d",responseObj.IdFoto]];
+                                                        // }
+                                                         
+                                                         completion(nil);
+                                                    // }
+                                                     
+                                                     
+                                                 } failure:^(NSURLSessionDataTask *task, NSError *error) {
+                                                     
+                                                     if (((NSHTTPURLResponse *) [task response]).statusCode == kErrorUnauthorized) {
+                                                         completion(NSLocalizedString(badCredentials, nil));
+                                                     } else {
+                                                         completion(NSLocalizedString(serverDown, nil));
+                                                     }
+                                                 }];
+    
+    return task;
+}
+
 
 + (APIClient *)sharedManager {
     static APIClient *_sharedManager = nil;

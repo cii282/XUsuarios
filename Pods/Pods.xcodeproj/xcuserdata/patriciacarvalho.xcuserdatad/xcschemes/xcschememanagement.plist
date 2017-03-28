@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SVPullToRefresh_Bell.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,27 +47,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0792444D1C07BFD88429C037B8DC60B0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>08D1E36A48AFADE55C67C4A1B78224B1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>75AE4172BD8AC84880B7BC211022E319</key>
+		<key>16D8E7E3EE9100226C7895DDA32C44FC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>27BEB2CFD0336B6B0AF6E2D13F8270E1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>554889AC0916D3E662C7F438F4D4B08B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8E0505360A61874FABDC590252D1293F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C8C7E9DDD0B8942AAF605C648D22B419</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CDF09B8643A89D9C3827BF7DBDBF29A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

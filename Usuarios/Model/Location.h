@@ -7,7 +7,11 @@
 //
 
 #import <JSONModel/JSONModel.h>
+@protocol Location
+@end
 
 @interface Location : JSONModel
+
+@property(nonatomic, strong) NSString *state;
 
 @end

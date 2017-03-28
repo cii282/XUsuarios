@@ -9,5 +9,8 @@
 #import "Bio.h"
 
 @implementation Bio
-
++(BOOL)propertyIsOptional:(NSString*)propertyName
+{
+    return YES;
+}
 @end

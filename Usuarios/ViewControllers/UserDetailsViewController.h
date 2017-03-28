@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UserDetailsViewController : UIViewController
+@interface UserDetailsViewController : UIViewController<UIActionSheetDelegate,UIImagePickerControllerDelegate>
 
+@property (nonatomic,strong) NSNumber *userId;
 @end

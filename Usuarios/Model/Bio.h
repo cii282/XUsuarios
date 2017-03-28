@@ -12,4 +12,5 @@
 
 @interface Bio : JSONModel
 @property(nonatomic, strong) NSString *mini;
+@property(nonatomic, strong) NSString *full;
 @end

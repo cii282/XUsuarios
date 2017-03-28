@@ -12,6 +12,7 @@ target 'Usuarios' do
   pod 'SVPullToRefresh_Bell'
   pod 'AFNetworking'
   pod 'SDWebImage'
+  pod 'SVProgressHUD'
 
   target 'UsuariosTests' do
     inherit! :search_paths

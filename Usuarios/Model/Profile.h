@@ -8,6 +8,10 @@
 
 #import <JSONModel/JSONModel.h>
 
+@protocol Profile
+@end
+
 @interface Profile : JSONModel
 
+@property(nonatomic, strong) NSString *background_image;
 @end
