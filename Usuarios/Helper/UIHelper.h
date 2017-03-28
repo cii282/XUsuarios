@@ -16,12 +16,12 @@
 
 - (void)mostrarAlerta:(NSString *)titulo mensagem:(NSString *)mensagem delegate:(id)delegate;
 
--(int)sizeText:(UILabel *)label;
+- (int)sizeText:(UILabel *)label;
 
 + (void)showProgress;
 
 + (void)hideProgress;
 
-+(NSString *)imageToNSString:(UIImage *)image;
++(NSData *)imageToNSData:(UIImage *)image;
 
 @end

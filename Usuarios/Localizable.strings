@@ -8,3 +8,5 @@
 "ServerDown" = "Ocorreu um erro de comunicação com o servidor";
 "BadCredentials" = "Ocorreu um erro de comunicação com o servidor";
 "Sucesso" = "Imagem enviada com sucesso";
+"Falha" = "Não foi possível enviar a imagem.";
+"Camera" = "Não foi possível abrir a camera.";

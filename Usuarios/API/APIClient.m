@@ -97,33 +97,39 @@ NSString *const APIMeusCupons = @"Cupom/ObterMeusCupons";
     
 }
 
-- (NSURLSessionDataTask *) sendImage:(UploadImageRequest*)request completion:(void (^)(NSString* errorMessage)) completion{
-    
-    
-    NSDictionary *parametros = [request toDictionary];
-    
-    
-    NSURLSessionDataTask *task = [self POSTWithLogParams:@"upload" parameters:parametros
-                                                 success:^(NSURLSessionDataTask *task, id responseObject) {
-                                                     NSError *error;
-                                                     
-                                                    
-                                                     
-                                                     if (error)
-                                                         completion(NSLocalizedString(serverDown, nil));
-                                                     else {
 
-                                                         completion(nil);
-                                                     }
-
-                                                 } failure:^(NSURLSessionDataTask *task, NSError *error) {
-                                                     
-                                                     if (((NSHTTPURLResponse *) [task response]).statusCode == kErrorUnauthorized) {
-                                                         completion(NSLocalizedString(badCredentials, nil));
-                                                     } else {
-                                                         completion(NSLocalizedString(serverDown, nil));
-                                                     }
-                                                 }];
+- (NSURLSessionDataTask *) sendImage:(NSData*)request completion:(void (^)(UploadResponse *response, NSString* errorMessage)) completion{
+    
+    
+    //NSDictionary *parametros = [request toDictionary];
+    NSDictionary *paramet = [NSDictionary new];
+    id block = ^(id<AFMultipartFormData> formData) {
+        [formData appendPartWithFileData:request
+                                    name:@"image"
+                                fileName:@"image.png"
+                                mimeType:@"image/png"];
+    };
+    
+    NSURLSessionDataTask *task = [self POST:@"upload" parameters:paramet constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSError *error;
+        
+        UploadResponse *uploadResponse = [[UploadResponse  alloc] initWithDictionary:responseObject error:&error];
+        
+        if (error)
+            completion(nil, NSLocalizedString(serverDown, nil));
+        else {
+            
+            completion(uploadResponse, nil);
+        }
+        
+    }  failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        if (((NSHTTPURLResponse *) [task response]).statusCode == kErrorUnauthorized) {
+            completion(nil, NSLocalizedString(badCredentials, nil));
+        } else {
+            completion(nil, NSLocalizedString(serverDown, nil));
+        }
+    }];
     
     return task;
 }
@@ -214,5 +220,43 @@ NSString *const APIMeusCupons = @"Cupom/ObterMeusCupons";
     return task;
     
 }
+
+//- (NSURLSessionDataTask *)POSTT:(NSString *)URLString
+//                    parameters:(id)parameters
+//     constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block
+//                       success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
+//                       failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
+//{
+//    NSError *serializationError = nil;
+//    NSMutableURLRequest *request = [self.requestSerializer multipartFormRequestWithMethod:@"POST" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters constructingBodyWithBlock:block error:&serializationError];
+//    if (serializationError) {
+//        if (failure) {
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Wgnu"
+//            dispatch_async(self.completionQueue ?: dispatch_get_main_queue(), ^{
+//                failure(nil, serializationError);
+//            });
+//#pragma clang diagnostic pop
+//        }
+//        
+//        return nil;
+//    }
+//    
+//    __block NSURLSessionDataTask *task = [self uploadTaskWithStreamedRequest:request progress:nil completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
+//        if (error) {
+//            if (failure) {
+//                failure(task, error);
+//            }
+//        } else {
+//            if (success) {
+//                success(task, responseObject);
+//            }
+//        }
+//    }];
+//    
+//    [task resume];
+//    
+//    return task;
+//}
 
 @end

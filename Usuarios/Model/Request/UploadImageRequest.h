@@ -10,5 +10,5 @@
 
 @interface UploadImageRequest : JSONModel
 
-@property(nonatomic, strong) NSString *image;
+@property(nonatomic, strong) NSData *image;
 @end

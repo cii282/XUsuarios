@@ -22,10 +22,10 @@
     return _sharedManager;
 }
 
-+(NSString *)imageToNSString:(UIImage *)image
++(NSData *)imageToNSData:(UIImage *)image
 {
     NSData *imageData = UIImagePNGRepresentation(image);
-    return [imageData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    return imageData;
 }
 
 +(void)showProgress{
@@ -59,4 +59,5 @@
     size = CGSizeMake(ceil(boundingBox.width), ceil(boundingBox.height));
     return size.height;
 }
+
 @end

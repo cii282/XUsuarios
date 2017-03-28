@@ -124,6 +124,10 @@
 #pragma mark - Choose Imgage
 
 - (void) chooseImage:(UIImagePickerControllerSourceType) source{
+    if (source == UIImagePickerControllerSourceTypeCamera && ![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        [[UIHelper sharedInstance] mostrarAlerta:@"" mensagem:NSLocalizedString(@"Camera",nil) delegate:self];
+        return;
+    }
     
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     [imagePicker setSourceType:source];
@@ -168,18 +172,22 @@
 
 -(void)uploadImage:(UIImage*) image{
     [UIHelper showProgress];
-    UploadImageRequest *request = [[UploadImageRequest alloc] init];
-    request.image = [UIHelper imageToNSString:image];
+    NSData *imageUpload = [UIHelper imageToNSData:image];
     
     
-    [[APIClient sharedManager] sendImage:request completion:^(NSString *errMessage) {
+    [[APIClient sharedManager] sendImage:imageUpload completion:^(UploadResponse *response, NSString *errMessage) {
         [UIHelper hideProgress];
         if (errMessage){
             [[UIHelper sharedInstance]mostrarAlerta:@"" mensagem:errMessage delegate:self];
         }
         else{
+            if([response.ok isEqual:@1]){
                 [[UIHelper sharedInstance] mostrarAlerta:@"" mensagem:NSLocalizedString(@"Sucesso",nil) delegate:self];
                 [self.navigationController popViewControllerAnimated:YES];
+            }
+            else{
+                [[UIHelper sharedInstance] mostrarAlerta:@"" mensagem:NSLocalizedString(@"Falha",nil) delegate:self];
+            }
         }
     }];
 }

@@ -30,6 +30,7 @@
 		263424B91E89BBEC001D0B40 /* UIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 263424B81E89BBEC001D0B40 /* UIHelper.m */; };
 		263424BC1E89E3D2001D0B40 /* UploadImageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 263424BB1E89E3D2001D0B40 /* UploadImageRequest.m */; };
 		263424BE1E8A81EA001D0B40 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 263424BD1E8A81EA001D0B40 /* Localizable.strings */; };
+		263424C11E8AA2DA001D0B40 /* UploadResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 263424C01E8AA2DA001D0B40 /* UploadResponse.m */; };
 		C294AA46E1096565BAC72D67 /* Pods_UsuariosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CD0AA097A26E6A76AC551A /* Pods_UsuariosUITests.framework */; };
 		CC47B6D401A69E9CCA15A4FE /* Pods_UsuariosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EFD670DE4C118484C26857 /* Pods_UsuariosTests.framework */; };
 		E36313C7F517001354B969FE /* Pods_Usuarios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6CDABF232C00C9095179BA9 /* Pods_Usuarios.framework */; };
@@ -97,6 +98,8 @@
 		263424BA1E89E3D2001D0B40 /* UploadImageRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UploadImageRequest.h; path = Model/Request/UploadImageRequest.h; sourceTree = "<group>"; };
 		263424BB1E89E3D2001D0B40 /* UploadImageRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UploadImageRequest.m; path = Model/Request/UploadImageRequest.m; sourceTree = "<group>"; };
 		263424BD1E8A81EA001D0B40 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		263424BF1E8AA2DA001D0B40 /* UploadResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UploadResponse.h; path = Model/Response/UploadResponse.h; sourceTree = "<group>"; };
+		263424C01E8AA2DA001D0B40 /* UploadResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UploadResponse.m; path = Model/Response/UploadResponse.m; sourceTree = "<group>"; };
 		46AE10EFD80BB77A68248F60 /* Pods-UsuariosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsuariosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UsuariosUITests/Pods-UsuariosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A38A23900C1FD8E09E39E77 /* Pods-UsuariosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsuariosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UsuariosTests/Pods-UsuariosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		82CD0AA097A26E6A76AC551A /* Pods_UsuariosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UsuariosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,6 +262,8 @@
 			children = (
 				2634249A1E89891B001D0B40 /* UsersResponse.h */,
 				2634249B1E89891B001D0B40 /* UsersResponse.m */,
+				263424BF1E8AA2DA001D0B40 /* UploadResponse.h */,
+				263424C01E8AA2DA001D0B40 /* UploadResponse.m */,
 			);
 			name = Response;
 			sourceTree = "<group>";
@@ -599,6 +604,7 @@
 				263424A01E898A84001D0B40 /* UsersListViewController.m in Sources */,
 				263424561E89827C001D0B40 /* AppDelegate.m in Sources */,
 				2634248E1E89856C001D0B40 /* Bio.m in Sources */,
+				263424C11E8AA2DA001D0B40 /* UploadResponse.m in Sources */,
 				263424A81E899506001D0B40 /* UserCellTableViewCell.m in Sources */,
 				263424AC1E89A5E1001D0B40 /* UserDetailsViewController.m in Sources */,
 				263424531E89827C001D0B40 /* main.m in Sources */,

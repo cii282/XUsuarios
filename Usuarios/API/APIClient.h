@@ -8,6 +8,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "UsersResponse.h"
 #import "UploadImageRequest.h"
+#import "UploadResponse.h"
 
 @interface APIClient : AFHTTPSessionManager
 
@@ -16,6 +17,8 @@
 
 - (NSURLSessionDataTask *)userDetail:(NSNumber *)userId completion:(void (^)(User *response, NSString *errorMessage))completion;
 
-- (NSURLSessionDataTask *) sendImage:(UploadImageRequest*)request completion:(void (^)(NSString* errorMessage)) completion;
+- (NSURLSessionDataTask *) sendImage:(NSData
+                                      *)request completion:(void (^)(UploadResponse * response, NSString* errorMessage)) completion;
 
+- (void)uploadImage:(UIImage*)image withImageName:(NSString*)imageName andParams:(NSDictionary*)paramsDict;
 @end
