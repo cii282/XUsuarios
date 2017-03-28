@@ -68,7 +68,7 @@ int const limit = 20;
         [UIHelper hideProgress];
         if(errorMessage)
         {
-            NSLog(@"Erro");
+            [[UIHelper sharedInstance]mostrarAlerta:@"" mensagem:errorMessage delegate:self];
             
         }
         else  {

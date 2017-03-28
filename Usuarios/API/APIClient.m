@@ -79,12 +79,7 @@ NSString *const APIMeusCupons = @"Cupom/ObterMeusCupons";
                                                      if (error)
                                                          completion(nil, NSLocalizedString(serverDown, nil));
                                                      else {
-//                                                         if (!loginResponse.success){
-//                                                             
-//                                                             [[UIHelper sharedInstance] mostrarAlerta:loginResponse.message];
-//                                                         }
-//                                                         
-                                                         
+
                                                          completion(detailsResponse, nil);
                                                      }
                                                      
@@ -117,18 +112,10 @@ NSString *const APIMeusCupons = @"Cupom/ObterMeusCupons";
                                                      if (error)
                                                          completion(NSLocalizedString(serverDown, nil));
                                                      else {
-//                                                         if (!responseObj.success){
-//                                                             
-//                                                             [[UIHelper sharedInstance] mostrarAlerta:responseObj.message];
-                                                         }
-                                                         //else{
-                                                            // [self setUserFoto:[NSString stringWithFormat:@"%d",responseObj.IdFoto]];
-                                                        // }
-                                                         
+
                                                          completion(nil);
-                                                    // }
-                                                     
-                                                     
+                                                     }
+
                                                  } failure:^(NSURLSessionDataTask *task, NSError *error) {
                                                      
                                                      if (((NSHTTPURLResponse *) [task response]).statusCode == kErrorUnauthorized) {

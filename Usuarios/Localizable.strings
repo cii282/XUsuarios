@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Usuarios
+
+  Created by Patricia Carvalho on 28/03/17.
+  Copyright © 2017 Patricia Carvalho. All rights reserved.
+*/
+"ServerDown" = "Ocorreu um erro de comunicação com o servidor";
+"BadCredentials" = "Ocorreu um erro de comunicação com o servidor";
+"Sucesso" = "Imagem enviada com sucesso";

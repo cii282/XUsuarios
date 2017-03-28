@@ -14,6 +14,8 @@
 
 + (UIHelper *)sharedInstance;
 
+- (void)mostrarAlerta:(NSString *)titulo mensagem:(NSString *)mensagem delegate:(id)delegate;
+
 -(int)sizeText:(UILabel *)label;
 
 + (void)showProgress;

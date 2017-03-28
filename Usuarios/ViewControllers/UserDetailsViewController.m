@@ -37,13 +37,13 @@
 
 -(void)getDetailsUser{
     [UIHelper showProgress];
-    [[APIClient sharedManager] userDetail:@600 completion:^(User *response, NSString *errorMessage){
+    [[APIClient sharedManager] userDetail:self.userId completion:^(User *response, NSString *errorMessage){
         
         [UIHelper hideProgress];
         
         if(errorMessage)
         {
-            NSLog(@"Erro");
+            [[UIHelper sharedInstance]mostrarAlerta:@"" mensagem:@"Erro" delegate:self];
             
         }
         else  {
@@ -79,7 +79,7 @@
      placeholderImage:[UIImage imageNamed:@"placeholder"]];
 
     lbName.text = [NSString stringWithFormat:@"%@ %@", userDetails.name.first, userDetails.name.last];
-    lbBio.text = [userDetails.bio.full isEqualToString:@""] ? userDetails.bio.mini : userDetails.bio.full;
+    lbBio.text = userDetails.bio.full == nil ? userDetails.bio.mini : userDetails.bio.full;
     heightLbBio.constant = [[UIHelper sharedInstance]sizeText:lbBio];
     lbEmail.text = userDetails.email;
     lbLocation.text = userDetails.location.state;
@@ -121,14 +121,9 @@
     }
 }
 
-#pragma mark - Avatar Related
+#pragma mark - Choose Imgage
 
-- (void) chooseImage:(UIImagePickerControllerSourceType) source{ 
-    //Tira a foto
-//    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-//        NSLog(@"Camera not Available");
-//        return;
-//    }
+- (void) chooseImage:(UIImagePickerControllerSourceType) source{
     
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     [imagePicker setSourceType:source];
@@ -180,12 +175,11 @@
     [[APIClient sharedManager] sendImage:request completion:^(NSString *errMessage) {
         [UIHelper hideProgress];
         if (errMessage){
-           // [[UIHelper sharedInstance] mostrarAlerta:errMessage];
+            [[UIHelper sharedInstance]mostrarAlerta:@"" mensagem:errMessage delegate:self];
         }
         else{
-//            if(![response.message isEqualToString:@""])
-//                [[UIHelper sharedInstance] mostrarAlerta:response.message];
-//            [self.navigationController popViewControllerAnimated:YES];
+                [[UIHelper sharedInstance] mostrarAlerta:@"" mensagem:NSLocalizedString(@"Sucesso",nil) delegate:self];
+                [self.navigationController popViewControllerAnimated:YES];
         }
     }];
 }

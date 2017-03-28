@@ -41,6 +41,10 @@
     [SVProgressHUD dismiss];
 }
 
+- (void)mostrarAlerta:(NSString *)titulo mensagem:(NSString *)mensagem delegate:(id)delegate {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:titulo message:mensagem delegate:delegate cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    [alertView show];
+}
 
 -(int)sizeText:(UILabel *)label{
     CGSize constraint = CGSizeMake(label.frame.size.width, CGFLOAT_MAX);
